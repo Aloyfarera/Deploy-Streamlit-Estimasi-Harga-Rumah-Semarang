@@ -1,7 +1,8 @@
 streamlit
-pandas==1.2.4
-matplotlib==3.3.4
-shap==0.40.0
+pandas
+matplotlib
+shap
+pickle
 plotly
 seaborn
 numpy

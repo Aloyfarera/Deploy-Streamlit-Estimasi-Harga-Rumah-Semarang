@@ -1,5 +1,4 @@
 # simple_streamlit_app
 
-![](Capture.PNG)
-"# prediksi-harga-rumah-semarang" 
+![](Capture.PNG) 
 "# Estimasi-Harga-Rumah-Semarang" 

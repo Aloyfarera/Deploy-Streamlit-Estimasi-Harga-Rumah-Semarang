@@ -97,7 +97,7 @@ elif kecamatan == "gunung pati":
      jarak_bandara = st.sidebar.slider('Masukan Jarak dari bandara Ahmad Yani',3.462800,12.420384)
      jarak_stasiun = st.sidebar.slider('Masukan Jarak dari Stasiun Poncol',4.662800,12.420384)
 elif kecamatan == 'candisari':
-     kecamatan == 1
+     kecamatan = 1
      kode_pos = st.sidebar.number_input('Masukan Kode Pos',min_value =50251,max_value=50257,step=1)
      longitude = st.sidebar.slider('Masukan longitude',110.301580,110.438429)
      latitude = st.sidebar.slider('Masukan latitude',-7.026560,-6.954490)

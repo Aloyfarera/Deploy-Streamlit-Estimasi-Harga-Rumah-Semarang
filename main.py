@@ -38,7 +38,8 @@ if   kecamatan == "tembalang":
      longitude = st.sidebar.slider('Masukan longitude',110.414270,110.475850)
      latitude = st.sidebar.slider('Masukan latitude',-7.065130,-6.954490)
      jarak_simpanglima = st.sidebar.slider('Masukan Jarak dari Simpang Lima',3.479345,13.474958)
-     jarak_bandara = st.sidebar.slider('Masukan Jarak dari bandara Ahmad Yani',3.462800,13.420384)
+     jarak_bandara = st.sidebar.slider('Masukan Jarak dari Bandara Ahmad Yani',3.462800,13.420384)
+     jarak_stasiun = st.sidebar.slider('Masukan Jarak dari Stasiun Poncol',4.962800,13.420384)
 elif kecamatan == 'banyumanik':
      kecamatan = 0
      kode_pos = st.sidebar.number_input('Masukan Kode Pos',min_value =50261,max_value=50269,step=1)
@@ -46,6 +47,7 @@ elif kecamatan == 'banyumanik':
      latitude = st.sidebar.slider('Masukan latitude',-7.086245,-6.954490)
      jarak_simpanglima = st.sidebar.slider('Masukan Jarak dari Simpang Lima',4.825997,13.474958)
      jarak_bandara = st.sidebar.slider('Masukan Jarak dari bandara Ahmad Yani',6.995981,13.420384)
+     jarak_stasiun = st.sidebar.slider('Masukan Jarak dari Stasiun Poncol',4.962800,13.420384)
 elif kecamatan == "pedurungan":
      kecamatan = 8
      kode_pos = st.sidebar.number_input('Masukan Kode Pos',min_value =50191,max_value=50199,step=1)
@@ -53,6 +55,7 @@ elif kecamatan == "pedurungan":
      latitude = st.sidebar.slider('Masukan latitude',-7.008900,-6.954490)
      jarak_simpanglima = st.sidebar.slider('Masukan Jarak dari Simpang Lima',1.104285,6.610483)
      jarak_bandara = st.sidebar.slider('Masukan Jarak dari bandara Ahmad Yani',10.474958,13.420384)
+     jarak_stasiun = st.sidebar.slider('Masukan Jarak dari Stasiun Poncol',1.162800,6.420384)
 elif kecamatan == "gajah mungkur":
      kecamatan = 2
      kode_pos = st.sidebar.number_input('Masukan Kode Pos',min_value =50231,max_value=50237,step=1)
@@ -60,13 +63,15 @@ elif kecamatan == "gajah mungkur":
      latitude = st.sidebar.slider('Masukan latitude',-7.004469,-6.954490)
      jarak_simpanglima = st.sidebar.slider('Masukan Jarak dari Simpang Lima',2.262091,13.474958)
      jarak_bandara = st.sidebar.slider('Masukan Jarak dari bandara Ahmad Yani',3.462800,13.420384)
+     jarak_stasiun = st.sidebar.slider('Masukan Jarak dari Stasiun Poncol',2.262800,13.420384)
 elif kecamatan == "ngaliyan":
      kecamatan = 7
      kode_pos = st.sidebar.number_input('Masukan Kode Pos',min_value =50181,max_value=50189,step=1)
      longitude = st.sidebar.slider('Masukan longitude',110.301580,	110.475850)
      latitude = st.sidebar.slider('Masukan latitude',-7.063034,-6.954490)
-     jarak_simpanglima = st.sidebar.slider('Masukan Jarak dari Simpang Lima',4.327022,0.736553)
+     jarak_simpanglima = st.sidebar.slider('Masukan Jarak dari Simpang Lima',4.327022,13.736553)
      jarak_bandara = st.sidebar.slider('Masukan Jarak dari bandara Ahmad Yani',3.462800,13.420384)
+     jarak_stasiun = st.sidebar.slider('Masukan Jarak dari Stasiun Poncol',4.262800,13.420384)
 elif kecamatan == "gayamsari":
      kecamatan = 3
      kode_pos = st.sidebar.number_input('Masukan Kode Pos',min_value =50151,max_value=50167,step=1)
@@ -74,6 +79,7 @@ elif kecamatan == "gayamsari":
      latitude = st.sidebar.slider('Masukan latitude',-7.001198,-6.954490)
      jarak_simpanglima = st.sidebar.slider('Masukan Jarak dari Simpang Lima',2.399137,7.449866)
      jarak_bandara = st.sidebar.slider('Masukan Jarak dari bandara Ahmad Yani',3.462800,13.420384)
+     jarak_stasiun = st.sidebar.slider('Masukan Jarak dari Stasiun Poncol',2.562800,8.420384)
 elif kecamatan == "genuk":
      kecamatan = 4
      kode_pos = st.sidebar.number_input('Masukan Kode Pos',min_value =50111,max_value=50118,step=1)
@@ -81,7 +87,7 @@ elif kecamatan == "genuk":
      latitude = st.sidebar.slider('Masukan latitude',-6.975149,-6.963677)
      jarak_simpanglima = st.sidebar.slider('Masukan Jarak dari Simpang Lima',5.948461,7.660848)
      jarak_bandara = st.sidebar.slider('Masukan Jarak dari bandara Ahmad Yani',10.224076,12.420384)
-     
+     jarak_stasiun = st.sidebar.slider('Masukan Jarak dari Stasiun Poncol',5.962800,9.420384)
 elif kecamatan == "gunung pati":
      kecamatan = 5
      kode_pos = st.sidebar.number_input('Masukan Kode Pos',min_value =50221,max_value=50229,step=1)
@@ -89,13 +95,15 @@ elif kecamatan == "gunung pati":
      latitude = st.sidebar.slider('Masukan latitude',-7.086245,-7.022686)
      jarak_simpanglima = st.sidebar.slider('Masukan Jarak dari Simpang Lima',4.601784,12.474958)
      jarak_bandara = st.sidebar.slider('Masukan Jarak dari bandara Ahmad Yani',3.462800,12.420384)
+     jarak_stasiun = st.sidebar.slider('Masukan Jarak dari Stasiun Poncol',4.662800,12.420384)
 elif kecamatan == 'candisari':
      kecamatan == 1
      kode_pos = st.sidebar.number_input('Masukan Kode Pos',min_value =50251,max_value=50257,step=1)
      longitude = st.sidebar.slider('Masukan longitude',110.301580,110.438429)
      latitude = st.sidebar.slider('Masukan latitude',-7.026560,-6.954490)
-     jarak_simpanglima = st.sidebar.slider('Masukan Jarak dari Simpang Lima',4.479345,0.674958)
+     jarak_simpanglima = st.sidebar.slider('Masukan Jarak dari Simpang Lima',2.479345,0.674958)
      jarak_bandara = st.sidebar.slider('Masukan Jarak dari bandara Ahmad Yani',12.462800,9.420384)
+     jarak_stasiun = st.sidebar.slider('Masukan Jarak dari Stasiun Poncol',1.962800,13.420384)
 elif kecamatan == "mijen":
      kecamatan = 6
      kode_pos = st.sidebar.number_input('Masukan Kode Pos',min_value =50211,max_value=50219,step=1)
@@ -103,6 +111,7 @@ elif kecamatan == "mijen":
      latitude = st.sidebar.slider('Masukan latitude',-7.049416,-6.978920)
      jarak_simpanglima = st.sidebar.slider('Masukan Jarak dari Simpang Lima',3.479345,13.474958)
      jarak_bandara = st.sidebar.slider('Masukan Jarak dari bandara Ahmad Yani',3.462800,13.420384)
+     jarak_stasiun = st.sidebar.slider('Masukan Jarak dari Stasiun Poncol',3.962800,13.420384)
 elif kecamatan == "tugu":
      kecamatan = 15
      kode_pos = st.sidebar.number_input('Masukan Kode Pos',min_value =50151,max_value=50156,step=1)
@@ -110,6 +119,7 @@ elif kecamatan == "tugu":
      latitude = st.sidebar.slider('Masukan latitude',-6.973593,-6.971876)
      jarak_simpanglima = st.sidebar.slider('Masukan Jarak dari Simpang Lima',8.479345,3.474958)
      jarak_bandara = st.sidebar.slider('Masukan Jarak dari bandara Ahmad Yani',8.462800,3.420384)
+     jarak_stasiun = st.sidebar.slider('Masukan Jarak dari Stasiun Poncol',6.962800,13.420384)
 elif kecamatan == "semarang tengah":
      kecamatan = 11
      kode_pos = st.sidebar.number_input('Masukan Kode Pos',min_value =50131,max_value=50139,step=1)
@@ -117,6 +127,7 @@ elif kecamatan == "semarang tengah":
      latitude = st.sidebar.slider('Masukan latitude',-7.015050,-6.954490)
      jarak_simpanglima = st.sidebar.slider('Masukan Jarak dari Simpang Lima',0.879345,3.474958)
      jarak_bandara = st.sidebar.slider('Masukan Jarak dari bandara Ahmad Yani',1.462800,4.420384)
+     jarak_stasiun = st.sidebar.slider('Masukan Jarak dari Stasiun Poncol',0.762800,5.420384)
 elif kecamatan == "semarang barat":
      kecamatan = 9
      kode_pos = st.sidebar.number_input('Masukan Kode Pos',min_value =50141,max_value=50149,step=1)
@@ -124,6 +135,7 @@ elif kecamatan == "semarang barat":
      latitude = st.sidebar.slider('Masukan latitude',-7.011184,-6.954490)
      jarak_simpanglima = st.sidebar.slider('Masukan Jarak dari Simpang Lima',1.479345,4.674958)
      jarak_bandara = st.sidebar.slider('Masukan Jarak dari bandara Ahmad Yani',0.462800,3.20384)
+     jarak_stasiun = st.sidebar.slider('Masukan Jarak dari Stasiun Poncol',0.262800,5.420384)
 elif kecamatan == "semarang utara":
      kecamatan = 13
      kode_pos = st.sidebar.number_input('Masukan Kode Pos',min_value =50171,max_value=50179,step=1)
@@ -131,6 +143,7 @@ elif kecamatan == "semarang utara":
      latitude = st.sidebar.slider('Masukan latitude',-6.973830,-6.954490)
      jarak_simpanglima = st.sidebar.slider('Masukan Jarak dari Simpang Lima',2.079345,8.474958)
      jarak_bandara = st.sidebar.slider('Masukan Jarak dari bandara Ahmad Yani',1.462800,5.420384)
+     jarak_stasiun = st.sidebar.slider('Masukan Jarak dari Stasiun Poncol',1.962800,7.420384)
 elif kecamatan == "semarang selatan":
      kecamatan = 10
      kode_pos = st.sidebar.number_input('Masukan Kode Pos',min_value =50241,max_value=50249,step=1)
@@ -145,6 +158,7 @@ elif kecamatan == "semarang timur":
      latitude = st.sidebar.slider('Masukan latitude',-7.034369,-6.954490)
      jarak_simpanglima = st.sidebar.slider('Masukan Jarak dari Simpang Lima',1.379345,5.474958)
      jarak_bandara = st.sidebar.slider('Masukan Jarak dari bandara Ahmad Yani',3.462800,8.420384)
+     jarak_stasiun = st.sidebar.slider('Masukan Jarak dari Stasiun Poncol',1.962800,8.420384)
      
 kamar_tidur= st.sidebar.number_input('Masukan Jumlah Kamar Tidur',min_value=1,max_value=10,value=3,step=1)
 kamar_mandi = st.sidebar.number_input('Masukan Jumlah Kamar Mandi',min_value=1,max_value=10,value=3,step=1)
@@ -174,7 +188,8 @@ data = { 'kamar tidur':kamar_tidur,
     'jumlah_lantai':jumlah_lantai,
     'pagar':pagar,
     'jarak_simpanglima':jarak_simpanglima,
-    'jarak_bandara':jarak_bandara}
+    'jarak_bandara':jarak_bandara,
+    'jarak_stasiun':jarak_stasiun}
 features = pd.DataFrame(data,index=[0])
 
 latlong = features[['latitude','longitude']]

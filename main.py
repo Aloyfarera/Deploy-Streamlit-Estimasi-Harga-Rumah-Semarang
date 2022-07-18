@@ -187,7 +187,7 @@ inp_df = features
 
 st.write(inp_df)
 def run():
-    model = pickle.load(open('model_estimasi2.sav', 'rb'))
+    model = pickle.load(open('model_estimasi.sav', 'rb'))
     harga = model.predict(inp_df)
     st.subheader('Harga Rumah')
     st.subheader("Estimasi Harga Rumah Anda Rp " + str('%.0f' % np.expm1(harga)))

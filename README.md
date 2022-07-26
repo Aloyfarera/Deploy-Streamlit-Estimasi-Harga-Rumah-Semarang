@@ -15,9 +15,4 @@ A streamlit multipage app for geospatial applications. It can be deployed to [St
 4. Add a new app to the `pages/` directory with an emoji in the file name, e.g., 1_🚀_Chart.py.
 
 ## Demo
-
-![](https://i.imgur.com/6lj0oAO.png)
-
-## Real Estate Data and Market Trends
-
-![](https://i.imgur.com/Z3dk6Tr.gif)
+![Uploading streamlit-main.gif…]()

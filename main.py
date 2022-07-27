@@ -206,8 +206,7 @@ def run():
     harga = model.predict(inp_df)
     st.subheader('Harga Rumah')
     st.subheader("Estimasi Harga Rumah Anda Rp " + str('%.0f' % np.expm1(harga)))
-    
-
+	
 btn = st.sidebar.button("Estimasi Sekarang")
 if btn:
 	run()

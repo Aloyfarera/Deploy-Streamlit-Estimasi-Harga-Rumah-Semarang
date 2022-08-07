@@ -5,3 +5,4 @@ shap
 plotly
 seaborn
 numpy
+streamlit-aggrid

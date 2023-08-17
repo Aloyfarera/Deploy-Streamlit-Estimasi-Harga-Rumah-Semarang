@@ -253,7 +253,6 @@ def page3():
     btn = st.sidebar.button("Estimasi Sekarang")
 
     if btn:
-     
         model = pickle.load(open('model_estimasi.sav', 'rb'))
         harga = model.predict(inp_df)
         st.subheader('Harga Rumah')

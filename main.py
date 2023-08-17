@@ -5,6 +5,7 @@ import streamlit as st
 import pickle
 import plotly.express as px
 from matplotlib.backends.backend_agg import RendererAgg
+from io import BytesIO
 import requests
 _lock = RendererAgg.lock
 
@@ -253,18 +254,18 @@ def page3():
     btn = st.sidebar.button("Estimasi Sekarang")
 
 
-    url = 'https://aoty-project1-sg1.s3.ap-southeast-1.amazonaws.com/model_estimasi.sav'
+     # URL of the saved model
+    model_url = 'https://aoty-project1-sg1.s3.ap-southeast-1.amazonaws.com/model_estimasi.sav'
 
-    response = requests.get(url)
+     # Load the model from the URL
+    response = requests.get(model_url)
+    model_data = BytesIO(response.content)
 
-
+     # Load the model using pickle
+    loaded_model = pickle.load(model_data)
     if btn:
-        if response.status_code == 200:
-          with open('model_estimasi.sav', 'wb') as f:
-               f.write(response.content)
-        else:
-          print('Error downloading file')
-        model = pickle.load(open('model_estimasi.sav', 'rb'))
+     
+        model = loaded_model
         harga = model.predict(inp_df)
         st.subheader('Harga Rumah')
         st.subheader("Estimasi Harga Rumah Anda Rp " + str('%.0f' % np.expm1(harga)))

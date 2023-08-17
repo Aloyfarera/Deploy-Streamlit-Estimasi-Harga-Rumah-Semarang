@@ -76,18 +76,8 @@ def page2():
             st.write(fig2)
         st.markdown("### Detailed Data View")
         st.data_editor(
-          df1,
-          column_config={
-               "reactions": st.column_config.ProgressColumn(
-                    "reactions",
-                    help="Reactions",
-                    format="%f",
-                    min_value=0,
-                    max_value=max(df1['reactions']),
-               ),
-          },
-          hide_index=True,
-          )
+          df1
+        )
 
 
 def page3():

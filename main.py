@@ -7,6 +7,7 @@ import plotly.express as px
 from matplotlib.backends.backend_agg import RendererAgg
 from io import BytesIO
 import requests
+import joblib
 _lock = RendererAgg.lock
 
 st.set_page_config(page_title='Estimasi Harga rumah Semarang', page_icon='house',layout="wide")
@@ -262,7 +263,7 @@ def page3():
     model_data = BytesIO(response.content)
 
      # Load the model using pickle
-    loaded_model = pickle.load(model_data)
+    loaded_model = joblib.load(model_data)
     if btn:
      
         model = loaded_model

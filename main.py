@@ -10,7 +10,7 @@ _lock = RendererAgg.lock
 
 st.set_page_config(page_title='Estimasi Harga rumah Semarang', page_icon='house',layout="wide")
 
-df = pd.read_csv("https://aoty-project1-sg1.s3.ap-southeast-1.amazonaws.com/model_estimasi.sav")
+df = pd.read_csv("https://aoty-project1-sg1.s3.ap-southeast-1.amazonaws.com/rumah123.csv")
 df = df.drop(['Unnamed: 0'] ,axis  = 1)
 df['kecamatan'] = df['kecamatan'].str.split(",").str[0]
 
@@ -255,7 +255,7 @@ def page3():
     st.write(inp_df)
     btn = st.sidebar.button("Estimasi Sekarang")
     if btn:
-        model = pickle.load(open('model_estimasi.sav', 'rb'))
+        model = pickle.load(open('https://aoty-project1-sg1.s3.ap-southeast-1.amazonaws.com/model_estimasi.sav', 'rb'))
         harga = model.predict(inp_df)
         st.subheader('Harga Rumah')
         st.subheader("Estimasi Harga Rumah Anda Rp " + str('%.0f' % np.expm1(harga)))

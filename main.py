@@ -75,12 +75,19 @@ def page2():
             fig2 = px.histogram(data_frame = df1, x = 'luas_tanah')
             st.write(fig2)
         st.markdown("### Detailed Data View")
-        gb = GridOptionsBuilder.from_dataframe(df1)
-        gb.configure_pagination()
-        gb.configure_side_bar()
-        gb.configure_default_column(groupable=True, value=True, enableRowGroup=True, aggFunc="sum", editable=True)
-        gridOptions = gb.build()
-        AgGrid(df1, gridOptions=gridOptions, enable_enterprise_modules=True)
+        st.data_editor(
+          df1,
+          column_config={
+               "reactions": st.column_config.ProgressColumn(
+                    "reactions",
+                    help="Reactions",
+                    format="%f",
+                    min_value=0,
+                    max_value=max(df1['reactions']),
+               ),
+          },
+          hide_index=True,
+          )
 
 
 def page3():

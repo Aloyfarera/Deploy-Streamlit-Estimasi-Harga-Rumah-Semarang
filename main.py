@@ -249,17 +249,26 @@ def page3():
     features = pd.DataFrame(data,index=[0])
     latlong = features[['latitude','longitude']]
     st.map(latlong)
+    #inp_df = features
+    #st.write(inp_df)
+    #btn = st.sidebar.button("Estimasi Sekarang")
+
+    
     inp_df = features
     st.write(inp_df)
-    btn = st.sidebar.button("Estimasi Sekarang")
-
-    if btn:
+    def run():
         model = pickle.load(open('model_estimasi.sav', 'rb'))
         harga = model.predict(inp_df)
         st.subheader('Harga Rumah')
         st.subheader("Estimasi Harga Rumah Anda Rp " + str('%.0f' % np.expm1(harga)))
+    
+    
+    
+    btn = st.sidebar.button("Estimasi Sekarang")
+    if btn:
+    	run()
     else:
-        pass
+    	pass
 
 page_names_to_funcs = {
     "Beranda": main_page,

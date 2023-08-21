@@ -10,7 +10,8 @@ _lock = RendererAgg.lock
 
 st.set_page_config(page_title='Estimasi Harga rumah Semarang', page_icon='house',layout="wide")
 
-df = pd.read_csv("https://aoty-project1-sg1.s3.ap-southeast-1.amazonaws.com/rumah123.csv")
+#df = pd.read_csv("https://aoty-project1-sg1.s3.ap-southeast-1.amazonaws.com/rumah123.csv")
+df = pd.read_csv("rumahsemarang.csv")
 df = df.drop(['Unnamed: 0'] ,axis  = 1)
 df['kecamatan'] = df['kecamatan'].str.split(",").str[0]
 

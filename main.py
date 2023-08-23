@@ -7,13 +7,6 @@ import plotly.express as px
 from matplotlib.backends.backend_agg import RendererAgg
 import requests
 import warnings
-from sklearn.exceptions import InconsistentVersionWarning
-warnings.simplefilter("error", InconsistentVersionWarning)
-
-try:
-   est = pickle.load(open('model_estimasi.sav', 'rb'))
-except InconsistentVersionWarning as w:
-   print(w.original_sklearn_version)
 
 _lock = RendererAgg.lock
 

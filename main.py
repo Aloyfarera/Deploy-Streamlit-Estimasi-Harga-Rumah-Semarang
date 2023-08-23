@@ -6,8 +6,6 @@ import pickle
 import plotly.express as px
 from matplotlib.backends.backend_agg import RendererAgg
 import requests
-import warnings
-
 _lock = RendererAgg.lock
 
 st.set_page_config(page_title='Estimasi Harga rumah Semarang', page_icon='house',layout="wide")
@@ -251,26 +249,17 @@ def page3():
     features = pd.DataFrame(data,index=[0])
     latlong = features[['latitude','longitude']]
     st.map(latlong)
-    #inp_df = features
-    #st.write(inp_df)
-    #btn = st.sidebar.button("Estimasi Sekarang")
-
-    
     inp_df = features
     st.write(inp_df)
-    def run():
+    btn = st.sidebar.button("Estimasi Sekarang")
+
+    if btn:
         model = pickle.load(open('model_estimasi.sav', 'rb'))
         harga = model.predict(inp_df)
         st.subheader('Harga Rumah')
         st.subheader("Estimasi Harga Rumah Anda Rp " + str('%.0f' % np.expm1(harga)))
-    
-    
-    
-    btn = st.sidebar.button("Estimasi Sekarang")
-    if btn:
-    	run()
     else:
-    	pass
+        pass
 
 page_names_to_funcs = {
     "Beranda": main_page,

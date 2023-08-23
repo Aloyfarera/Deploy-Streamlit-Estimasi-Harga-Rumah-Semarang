@@ -11,7 +11,7 @@ from sklearn.exceptions import InconsistentVersionWarning
 warnings.simplefilter("error", InconsistentVersionWarning)
 
 try:
-   est = pickle.loads("model_estimasi.sv")
+   est = pickle.loads("model_estimasi.sav")
 except InconsistentVersionWarning as w:
    print(w.original_sklearn_version)
 

@@ -6,6 +6,14 @@ import pickle
 import plotly.express as px
 from matplotlib.backends.backend_agg import RendererAgg
 import requests
+from sklearn.exceptions import InconsistentVersionWarning
+warnings.simplefilter("error", InconsistentVersionWarning)
+
+try:
+   est = pickle.loads("model_estimasi.sv")
+except InconsistentVersionWarning as w:
+   print(w.original_sklearn_version)
+
 _lock = RendererAgg.lock
 
 st.set_page_config(page_title='Estimasi Harga rumah Semarang', page_icon='house',layout="wide")

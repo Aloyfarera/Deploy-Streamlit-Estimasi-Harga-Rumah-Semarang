@@ -6,6 +6,7 @@ import pickle
 import plotly.express as px
 from matplotlib.backends.backend_agg import RendererAgg
 import requests
+import sklearn
 _lock = RendererAgg.lock
 print(sklearn.__version__)
 st.set_page_config(page_title='Estimasi Harga rumah Semarang', page_icon='house',layout="wide")

@@ -6,6 +6,7 @@ import pickle
 import plotly.express as px
 from matplotlib.backends.backend_agg import RendererAgg
 import requests
+import warnings
 from sklearn.exceptions import InconsistentVersionWarning
 warnings.simplefilter("error", InconsistentVersionWarning)
 

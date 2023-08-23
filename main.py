@@ -6,9 +6,9 @@ import pickle
 import plotly.express as px
 from matplotlib.backends.backend_agg import RendererAgg
 import requests
-import sklearn
+
 _lock = RendererAgg.lock
-print(sklearn.__version__)
+
 st.set_page_config(page_title='Estimasi Harga rumah Semarang', page_icon='house',layout="wide")
 
 #df = pd.read_csv("https://aoty-project1-sg1.s3.ap-southeast-1.amazonaws.com/rumah123.csv")

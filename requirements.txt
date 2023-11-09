@@ -1,6 +1,6 @@
 streamlit==1.25.0
 pandas
-matplotlib
+matplotlib==3.7
 shap
 plotly
 seaborn

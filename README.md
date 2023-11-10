@@ -1,5 +1,3 @@
-# streamlit-house_price_estimation
-
 # House Price Estimation Dashboard with Streamlit
 
 Welcome to the House Price Estimation Dashboard with Streamlit! This interactive dashboard is designed to explore and visualize house price estimation results based on various features.
